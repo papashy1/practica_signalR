@@ -1,0 +1,17 @@
+D:\NETCORE\puespues_tico\Aplicacion\bin\Debug\net7.0\Aplicacion.deps.json
+D:\NETCORE\puespues_tico\Aplicacion\bin\Debug\net7.0\Aplicacion.dll
+D:\NETCORE\puespues_tico\Aplicacion\bin\Debug\net7.0\Aplicacion.pdb
+D:\NETCORE\puespues_tico\Aplicacion\bin\Debug\net7.0\Dominio.dll
+D:\NETCORE\puespues_tico\Aplicacion\bin\Debug\net7.0\Persistencia.dll
+D:\NETCORE\puespues_tico\Aplicacion\bin\Debug\net7.0\Dominio.pdb
+D:\NETCORE\puespues_tico\Aplicacion\bin\Debug\net7.0\Persistencia.pdb
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.csproj.AssemblyReference.cache
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.AssemblyInfoInputs.cache
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.AssemblyInfo.cs
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.csproj.CoreCompileInputs.cache
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.csproj.CopyComplete
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.dll
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\refint\Aplicacion.dll
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\Aplicacion.pdb
+D:\NETCORE\puespues_tico\Aplicacion\obj\Debug\net7.0\ref\Aplicacion.dll

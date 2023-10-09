@@ -1,0 +1,86 @@
+/* styles.css */
+
+.custom-btn-dark {
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid transparent; /* Borde transparente por defecto */
+  transition: border 0.3s ease; /* Transición suave para el borde */
+}
+.custom-btn-dark:hover {
+  border-color: #FFFF00; /* Amarillo al pasar el mouse */
+  background-color: #363434; 
+}
+.custom-btn-red {
+  background-color: #db0000;
+  color: #ffffff;
+  border: 1px solid transparent; /* Borde transparente por defecto */
+  transition: border 0.3s ease; /* Transición suave para el borde */
+}
+.custom-btn-red:hover {
+  border-color: #FFFF00;
+  background-color: #880202; 
+}
+.custom-btn-redc {
+  background-color: #b40202;
+  color: #ffffff;
+  border: 1px solid transparent; /* Borde transparente por defecto */
+  transition: border 0.3s ease; /* Transición suave para el borde */
+}
+.custom-btn-redc:hover {
+  border-color: #FFFF00;
+  background-color: #5f0707; 
+}
+/* Fondo blanco oscuro y texto blanco por defecto */
+.custom-bg {
+  background-color: #d6d6d6;
+  color: #ffffff;
+}
+/* Fondo negro y texto blanco por defecto */
+.custom-bg-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+.custom-bg-formulario {
+  background-color: rgba(128, 128, 128, 0.5); /* Gris con opacidad reducida (0.7) */
+  padding: 0.25rem 0.5rem; /* Ajusta el espacio interno según sea necesario */
+  border-radius: 0.25rem; /* Agrega bordes redondeados */
+  border: 3px solid #969686
+}
+/* Fondo gris para el nombre de la farmacia */
+.navbar-brand {
+  background-color: rgba(128, 128, 128, 0.5); /* Gris con opacidad reducida (0.7) */
+  padding: 0.25rem 0.5rem; /* Ajusta el espacio interno según sea necesario */
+  border-radius: 1.25rem; /* Agrega bordes redondeados */
+}
+/* Cambio de color a amarillo al pasar el mouse o señalarlo */
+.custom-bg-dark .navbar-brand,
+.custom-bg-dark .nav-link {
+  transition: color 0.3s ease; /* Transición suave del color al pasar el mouse */
+}
+
+.custom-bg .navbar-brand:hover,
+.custom-bg .nav-link:hover {
+  color: #eeee20;
+}
+
+/* Barra de navegación negra */
+.navbar {
+  background-color: #000000;
+}
+
+/* Borde para el navbar */
+.custom-navbar-color {
+  border-bottom: 3px solid #969686;
+}
+/* Oculta elementos de encabezado y párrafos cuando se muestra el formulario */
+#registro-paciente.active-header {
+  display: none;
+}
+/* CSS personalizado */
+.custom-modal-bg {
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo negro con opacidad */
+}
+p {
+  font-weight: bold;
+}
+

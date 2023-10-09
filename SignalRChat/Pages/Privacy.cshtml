@@ -1,0 +1,60 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "📃 ---------------------- Taller ---------------------- 🕧";
+}
+<h1 class="text-danger fs-bold">@ViewData["Title"]</h1>
+<br><br>
+<p>En este Taller Les dare lo básico para lograr la creación de una aplicación de chat funcional en tiempo real con SignalR, rapido efectivo y desde 0.</p>
+<br>
+<p>1.  Bien teniendo en cuenta que ya tienen instalado todo lo que nesecitan, como se muestra en las guias del profesor.</p>
+<p>vamos a añadir a un proyecto existente o a iniciar un proyecto, nuevo abriendo la carpeta del proyecto con vs code..</p>
+<br>
+<p>2.  En la terminal introducir el siguiente comando: 
+<p class="text-primary"> dotnet new webapp -o SignalRChat
+code -r SignalRChat </p></p>
+<p>Seleccione Sí, en todas las ventanas que aparescan con esa opcion (dentro de vs code claro!)</p>
+<img class="mb-3" src="~/images/crear.png">
+<br>
+<p>3.  Ahora vamos a intstalar la siguiente libreria ( LibMan ), primero desinstala si existen verciones anteriores y luego instala su ultima vercion. En la terminal introducir el siguiente comando: </p>
+<p class="text-primary"> dotnet tool uninstall -g Microsoft.Web.LibraryManager.Cli
+dotnet tool install -g Microsoft.Web.LibraryManager.Cli</p>
+<img class="mb-3" src="~/images/libreria.png">
+
+<br>
+<p>4.  Vayan a la carpeta de proyecto, que contiene el archivo SignalRChat.csproj. (recuerden es con cd ./tap..tap..tap)</p>
+<p>Ejecuten el siguiente comando para obtener la biblioteca cliente de SignalR con LibMan (se demora un poco, reemplazar el 💫 por una arroba).</p>
+<p class="text-primary">libman install 💫microsoft/signalr@latest -p unpkg -d wwwroot/js/signalr --files dist/browser/signalr.js</p>
+<img class="mb-3" src="~/images/biblioteca.png">
+<br>
+<p>5.  En la carpeta del proyecto SignalRChat, cree una carpeta Hubs, en la nueva carpeta Hubs, cree la clase ChatHub con el código siguiente:</p>
+<img class="mb-3" src="~/images/clase.png">
+<br>
+<p>6.  El servidor de SignalR debe estar configurado para pasar solicitudes de SignalR a SignalR. Agreguen el siguiente código resaltado al archivo Program.cs,
+     el código resaltado agrega SignalR a los sistemas de inserción de dependencias y enrutamiento de ASP.NET Core. </p>
+<img class="mb-3" src="~/images/program.png">
+<br>
+<p>7.  Reemplace el contenido de Pages/Index.cshtml por el código siguiente:</p>
+<img class="mb-3" src="~/images/elhtml.png">
+<p>Dentro de la capeta "Pages" estan los archivos .cshtml que pueden ser modificados como cualquier front usar boostrap etc.. en wwwroot/css esta el archivo de estilos.</p>
+<br>
+<p>8.  En la carpeta wwwroot/js, cree un archivo chat.js con el código siguiente:</p>
+<img class="mb-3" src="~/images/eljs.png">
+<p>Esto agrega la logica basica de nuestros input y boton de chat</p>
+<br>
+<p>9. 🎈🎉 Terminamos!🎉🎈 hora de probarlo. Pulsa CTRL+F5 para ejecutar la aplicación sin depurar,
+     copia la url y abre mas paginas no importa si es en otro navegador y al enviar mensajes los veran en tiempo real como en una conversacion</p>
+<br>
+<p>10.  Bien en caso de ya tener un proyecto creado con ( dotnet new sln ) les doy una posible solucion, escribe en la terminal el siguiente comando:</p>
+<p class="text-primary">dotnet sln add Ruta/Al/Proyecto/SignalRChat.csproj</p>
+<img class="mb-3" src="~/images/agregar.png">
+<p>Ajusta la ruta segun sea tu caso.  Esto se hace por que signalR solo funciona si esta en un ( dotnet new webapp ) </p>
+<p>Dentro de sus "MiProyectoSignalR," utilicen el comando dotnet add reference para agregar una referencia al proyecto principal:</p>
+<p class="text-primary">dotnet add reference ../MiProyectoPrincipal/MiProyectoPrincipal.csproj</p>
+<img class="mb-3" src="~/images/referencia.png">
+<p>Esta referencia es para poder importar y usar clases entre proyectos de ser requerido y utilizarlos como uno solo dejo ejemplo:</p>
+<img class="mb-3" src="~/images/ejemplo.png">
+<p>Este proyecto esta en GitHub con la implementacion de los dos proyectos y funciona ( )</p>
+<br>
+<p> Me disculpo por la posible mala ortografia estoy muerto de sueño al escribir esto ❤</p>
+

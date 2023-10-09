@@ -1,0 +1,28 @@
+﻿@page
+<div class="container">
+    <div class="row p-1">
+        <div class="col-2 fw-bold text-dark">Tu Nombre Aqui: </div>
+        <div class="col-5"><input type="text" id="userInput" /></div>
+    </div>
+    <div class="row p-1 fw-bold text-dark">
+        <div class="col-2">Mensaje: </div>
+        <div class="col-5"><input type="text" class="w-100" id="messageInput" /></div>
+    </div>
+    <div class="row p-1 ">
+        <div class="col-3 text-end">
+            <button type="submit" class="btn custom-btn-red m-3" id="sendButton">Enviar</button>
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <hr />
+        </div>
+    </div>
+    <div class="row p-1">
+        <div class="col-6">
+            <ul id="messagesList"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>

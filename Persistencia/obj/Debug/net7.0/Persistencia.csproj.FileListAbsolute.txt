@@ -1,0 +1,15 @@
+D:\NETCORE\puespues_tico\Persistencia\bin\Debug\net7.0\Persistencia.deps.json
+D:\NETCORE\puespues_tico\Persistencia\bin\Debug\net7.0\Persistencia.dll
+D:\NETCORE\puespues_tico\Persistencia\bin\Debug\net7.0\Persistencia.pdb
+D:\NETCORE\puespues_tico\Persistencia\bin\Debug\net7.0\Dominio.dll
+D:\NETCORE\puespues_tico\Persistencia\bin\Debug\net7.0\Dominio.pdb
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.csproj.AssemblyReference.cache
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfoInputs.cache
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.AssemblyInfo.cs
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CoreCompileInputs.cache
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.csproj.CopyComplete
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.dll
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\refint\Persistencia.dll
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\Persistencia.pdb
+D:\NETCORE\puespues_tico\Persistencia\obj\Debug\net7.0\ref\Persistencia.dll
