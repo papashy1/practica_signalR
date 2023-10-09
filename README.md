@@ -5,24 +5,25 @@ vamos a añadir a un proyecto existente o a iniciar un proyecto, nuevo abriendo 
 
 2. En la terminal introducir el siguiente comando:
 
-dotnet new webapp -o SignalRChat code -r SignalRChat
+`dotnet new webapp -o SignalRChat code -r SignalRChat`
 
 Seleccione Sí, en todas las ventanas que aparescan con esa opcion (dentro de vs code claro!)
 
 
 3. Ahora vamos a intstalar la siguiente libreria ( LibMan ), primero desinstala si existen verciones anteriores y luego instala su ultima vercion. En la terminal introducir el siguiente comando:
 
-dotnet tool uninstall -g Microsoft.Web.LibraryManager.Cli dotnet tool install -g Microsoft.Web.LibraryManager.Cli
+`dotnet tool uninstall -g Microsoft.Web.LibraryManager.Cli dotnet tool install -g Microsoft.Web.LibraryManager.Cli`
 
 
 4. Vayan a la carpeta de proyecto, que contiene el archivo SignalRChat.csproj. (recuerden es con cd ./tap..tap..tap)
 Ejecuten el siguiente comando para obtener la biblioteca cliente de SignalR con LibMan (se demora un poco, reemplazar el 💫 por una arroba).
 
-libman install 💫microsoft/signalr@latest -p unpkg -d wwwroot/js/signalr --files dist/browser/signalr.js
+`libman install 💫microsoft/signalr@latest -p unpkg -d wwwroot/js/signalr --files dist/browser/signalr.js`
 
 
 5. En la carpeta del proyecto SignalRChat, cree una carpeta Hubs, en la nueva carpeta Hubs, cree la clase ChatHub con el código siguiente:
 
+```dotnet
 using Microsoft.AspNetCore.SignalR;
 
 namespace SignalRChat.Hubs
@@ -35,9 +36,11 @@ namespace SignalRChat.Hubs
         }
     }
 }
+```
 
 6. El servidor de SignalR debe estar configurado para pasar solicitudes de SignalR a SignalR. Agreguen el siguiente código al archivo Program.cs, el código agrega SignalR a los sistemas de inserción de dependencias y enrutamiento de ASP.NET Core.
 
+```dotnet
 using SignalRChat.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -98,12 +101,14 @@ app.Run();
 </div>
 <script src="~/js/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chat.js"></script>
+```
 
 Dentro de la capeta "Pages" estan los archivos .cshtml que pueden ser modificados como cualquier front usar boostrap etc.. en wwwroot/css esta el archivo de estilos.
 
 
 8. En la carpeta wwwroot/js, cree un archivo chat.js con el código siguiente:
 
+```dotnet
 "use strict";
 
 var connection = new signalR.HubConnectionBuilder().withUrl("/chatHub").build();
@@ -134,6 +139,7 @@ document.getElementById("sendButton").addEventListener("click", function (event)
     });
     event.preventDefault();
 });
+```
 
 Esto agrega la logica basica de nuestros input y boton de chat
 
@@ -143,15 +149,28 @@ Esto agrega la logica basica de nuestros input y boton de chat
 
 10. Bien en caso de ya tener un proyecto creado con ( dotnet new sln ) les doy una posible solucion, escribe en la terminal el siguiente comando:
 
-dotnet sln add Ruta/Al/Proyecto/SignalRChat.csproj
+`dotnet sln add Ruta/Al/Proyecto/SignalRChat.csproj`
 
 Ajusta la ruta segun sea tu caso. Esto se hace por que signalR solo funciona si esta en un ( dotnet new webapp )
 
 Dentro de sus "MiProyectoSignalR," utilicen el comando dotnet add reference para agregar una referencia al proyecto principal:
 
-dotnet add reference ../MiProyectoPrincipal/MiProyectoPrincipal.csproj
+`dotnet add reference ../MiProyectoPrincipal/MiProyectoPrincipal.csproj`
 
 Esta referencia es para poder importar y usar clases entre proyectos de ser requerido y utilizarlos como uno solo dejo ejemplo:
 
-Me disculpo por la posible mala ortografia estoy muerto de sueño al escribir esto ❤
+```dotnet
+// En "MiProyectoSignalR"
+using MiProyectoPrincipal.DTOs; // Importa el espacio de nombres del proyecto principal
 
+public class ChatHub : Hub
+{
+    public async Task EnviarMensaje(MensajeDto mensaje)
+    {
+        // Tu lógica para enviar el mensaje a los clientes
+        await Clients.All.SendAsync("RecibirMensaje", mensaje);
+    }
+}
+```
+
+Me disculpo por la posible mala ortografia estoy muerto de sueño al escribir esto ❤
