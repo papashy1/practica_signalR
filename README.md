@@ -5,14 +5,16 @@ vamos a añadir a un proyecto existente o a iniciar un proyecto, nuevo abriendo 
 
 2. En la terminal introducir el siguiente comando:
 
-`dotnet new webapp -o SignalRChat code -r SignalRChat`
+`dotnet new webapp -o SignalRChat
+code -r SignalRChat`
 
 Seleccione Sí, en todas las ventanas que aparescan con esa opcion (dentro de vs code claro!)
 
 
 3. Ahora vamos a intstalar la siguiente libreria ( LibMan ), primero desinstala si existen verciones anteriores y luego instala su ultima vercion. En la terminal introducir el siguiente comando:
 
-`dotnet tool uninstall -g Microsoft.Web.LibraryManager.Cli dotnet tool install -g Microsoft.Web.LibraryManager.Cli`
+`dotnet tool uninstall -g Microsoft.Web.LibraryManager.Cli
+dotnet tool install -g Microsoft.Web.LibraryManager.Cli`
 
 
 4. Vayan a la carpeta de proyecto, que contiene el archivo SignalRChat.csproj. (recuerden es con cd ./tap..tap..tap)
