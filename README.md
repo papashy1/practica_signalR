@@ -18,9 +18,9 @@ Seleccione Sí, en todas las ventanas que aparescan con esa opcion (dentro de vs
 
 
 4. Vayan a la carpeta de proyecto, que contiene el archivo SignalRChat.csproj. (recuerden es con cd ./tap..tap..tap)
-Ejecuten el siguiente comando para obtener la biblioteca cliente de SignalR con LibMan (se demora un poco, reemplazar el 💫 por una arroba).
+Ejecuten el siguiente comando para obtener la biblioteca cliente de SignalR con LibMan (puede demorar un poco).
 
-`libman install 💫microsoft/signalr@latest -p unpkg -d wwwroot/js/signalr --files dist/browser/signalr.js`
+`libman install @microsoft/signalr@latest -p unpkg -d wwwroot/js/signalr --files dist/browser/signalr.js`
 
 
 5. En la carpeta del proyecto SignalRChat, cree una carpeta Hubs, en la nueva carpeta Hubs, cree la clase ChatHub con el código siguiente:
