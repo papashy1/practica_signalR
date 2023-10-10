@@ -72,9 +72,11 @@ app.MapRazorPages();
 app.MapHub<ChatHub>("/chatHub");
 
 app.Run();
+```
 
 7. Reemplace el contenido de Pages/Index.cshtml por el código siguiente:
 
+```dotnet
 @page
 <div class="container">
     <div class="row p-1">
